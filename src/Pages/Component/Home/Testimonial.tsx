@@ -1,5 +1,6 @@
 import FlatButton from "../../../shared/FlatButton"
 import {UserOutlined} from '@ant-design/icons'
+import { Carousel } from "./Carousel"
 export const Testimonial = ()=>{
     const styles = {
         container:{
@@ -38,7 +39,7 @@ export const Testimonial = ()=>{
                         <p style={{textAlign:'center'}}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, cum.</p>
                     </div>
                     <div className="col-md-8">
-                        carousel
+                        <Carousel/>
                     </div>
                 </div>
             </div>
