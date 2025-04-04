@@ -1,5 +1,5 @@
 import FlatButton from "../../../shared/FlatButton"
-import {UserOutlined} from '@ant-design/icons'
+import {StarFilled, UserOutlined} from '@ant-design/icons'
 import { Carousel } from "./Carousel"
 export const Testimonial = ()=>{
     const styles = {
@@ -32,11 +32,14 @@ export const Testimonial = ()=>{
                         flexDirection:"column"
 
                     }}>
-                        <div style={styles.usericon}>
+                        <div style={{...styles.usericon, display:'flex', flexDirection:"column", alignItems:'center'}}>
+                            <div style={{fontSize:'18px', color:'white', backgroundColor:'black', padding:'2px', borderRadius:'5px', border:'solid 2px white'}}><StarFilled/><StarFilled/><StarFilled/></div>
                             <UserOutlined/>
                         </div>
                         <h3>Testimonials</h3>
-                        <p style={{textAlign:'center'}}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit, cum.</p>
+                        <p style={{textAlign:'center'}}>
+                            Hear what others are saying about us....
+                        </p>
                     </div>
                     <div className="col-md-8">
                         <Carousel/>

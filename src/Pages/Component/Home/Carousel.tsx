@@ -1,5 +1,5 @@
 import { data } from '../../../Data';
-
+import {LeftCircleFilled, RightCircleFilled} from '@ant-design/icons'
 const styles = {
     carouselcontainer:{
         paddingLeft:'80px'
@@ -13,7 +13,8 @@ const styles = {
     identity:{
         display:'flex',
         alignItems:'center',
-        gap:'15px'
+        gap:'15px',
+        justifyContent:'center'
     }
 }
 export const Carousel = () => {
@@ -23,29 +24,25 @@ export const Carousel = () => {
         {data.map((item, index) => (
           <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
             <div style={{
-                display:'flex',
-                flexDirection:'column',
-                alignItems:'center',
-                justifyContent:"center",
-                padding:"30px",
+                padding:"16px",
             }}>
               <div style={styles.identity}>
                 <div style={styles.profile}>
 
                 </div>
-              <div>
-              <h3>{item.name}</h3>
+              <div style={{marginBottom:'5px'}}>
+              <h3 style={{margin:'0'}}>{item.name}</h3>
               <small>{item.location}</small>
               </div>
               </div>
 
-              <p>{item.testimonial}</p>
+              <p style={{textAlign:'center',}}>{item.testimonial}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <button
+      <LeftCircleFilled
         className="carousel-control-prev"
         type="button"
         data-bs-target="#carouselExample"
@@ -53,8 +50,8 @@ export const Carousel = () => {
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
-      </button>
-      <button
+      </LeftCircleFilled>
+      <RightCircleFilled
         className="carousel-control-next"
         type="button"
         data-bs-target="#carouselExample"
@@ -62,7 +59,7 @@ export const Carousel = () => {
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>
-      </button>
+      </RightCircleFilled>
     </div>
   );
 };
