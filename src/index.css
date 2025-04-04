@@ -1,3 +1,8 @@
+:root{
+  --bg-dark:#4F1C51;
+  --bg-brown:#DCA06D;
+  --alt-text:black
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +12,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+nav{
+  background-color: #4F1C51 !important;
+}
+.nav-link, nav .active, nav .active:hover, .navbar-brand, a{
+  color: white !important;
+  text-decoration: none;
+}
+nav .container-fluid{
+  padding: 1% 5%;
+}
+section .container-fluid{
+  padding:3% 5%;
+
+}
+/* flat button */
+.btn{
+  background:var(--bg-brown)!important;
+  color: white;
+}
+
+/* testimonial testimonial */
+.testimonialcontainer{
+  background-color: var(--bg-brown);
+  border-radius: 17px;
+  padding: 30px;
 }
